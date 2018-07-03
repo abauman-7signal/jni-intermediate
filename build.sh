@@ -7,6 +7,9 @@ function buildNativeLibrary() {
 
 function buildJniLibrary() {
   javac -d build src/java/com/sevensignal/helloworld/HelloWorld.java
+}
+
+function packageLibraryIntoJar() {
   cp build/lib/libhelloworld.jnilib build/com/sevensignal/helloworld
   jar -cf build/helloworld.jar -C build com/sevensignal/helloworld
 }
@@ -17,4 +20,5 @@ function buildFunctionalTest() {
 
 buildNativeLibrary
 buildJniLibrary
+packageLibraryIntoJar
 buildFunctionalTest
