@@ -6,12 +6,12 @@ function buildNativeLibrary() {
 }
 
 function buildJniLibrary() {
-  javac -d build src/java/com/sevensignal/helloworld/HelloWorld.java
+  javac -d build/lib src/java/com/sevensignal/helloworld/HelloWorld.java
 }
 
 function packageLibraryIntoJar() {
-  cp build/lib/libhelloworld.jnilib build/com/sevensignal/helloworld
-  jar -cf build/helloworld.jar -C build com/sevensignal/helloworld
+  cp build/lib/libhelloworld.jnilib build/lib/com/sevensignal/helloworld
+  jar -cf build/helloworld.jar -C build/lib com/sevensignal/helloworld
 }
 
 function buildFunctionalTest() {

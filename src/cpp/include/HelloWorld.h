@@ -12,7 +12,7 @@ extern "C" {
  * Method:    print
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_HelloWorld_print
+JNIEXPORT void JNICALL Java_com_sevensignal_helloworld_HelloWorld_print
   (JNIEnv *, jobject);
 
 #ifdef __cplusplus
