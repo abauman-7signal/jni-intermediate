@@ -9,6 +9,8 @@ matches the above example.
 This project takes the above example and goes further by
 * Packaging the HelloWorld JNI code into a JAR
 * Creating the native interface to be part of Java package
+  Note: The signature of the C++ methods must reflect the name of the Java package
+  that wraps the C++ library.
 
 
 ### Prerequisites
@@ -25,3 +27,5 @@ This project takes the above example and goes further by
     $ java -cp .:helloworld.jar -Djava.library.path=lib com.sevensignal.mosfunctionaltester.TestJni
 
 should print the following to standard out: `Oh JNI, how cumbersome you are!`
+
+Note: Java needs to know the location of the JAR file and the path to the library.
